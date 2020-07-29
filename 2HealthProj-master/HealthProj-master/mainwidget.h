@@ -25,6 +25,7 @@
 #include "tempwidget.h"
 #include "TCPSocket.h"
 #include "client.h"
+#include "Qwidgetecgcom.h"
 
 
 class MainWidget : public QWidget
@@ -64,6 +65,7 @@ public:
     CO2Widget co2;
 
     GetSerial *gs = new GetSerial();
+    QWidgetEcgCom *com = new QWidgetEcgCom();
 
     Client cl;
     QThread tcpThread;

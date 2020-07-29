@@ -28,6 +28,7 @@ public:
 
     QList<int> dataForTCP;
 
+    void ecgBpmCalc(int ecgData);
 private:
     QList<int> data; //数据
     QList<int> time; //数据对应时间

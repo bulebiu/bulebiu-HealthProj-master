@@ -20,6 +20,7 @@ SOURCES += \
     GetSerial.cpp \
     PatientInfoWidget.cpp \
     PlotWidget.cpp \
+    Qwidgetecgcom.cpp \
     TCPSettingsWidget.cpp \
     TCPSocket.cpp \
     client.cpp \
@@ -43,6 +44,7 @@ HEADERS += \
     GetSerial.h \
     PatientInfoWidget.h \
     PlotWidget.h \
+    Qwidgetecgcom.h \
     TCPSettingsWidget.h \
     TCPSocket.h \
     client.h \

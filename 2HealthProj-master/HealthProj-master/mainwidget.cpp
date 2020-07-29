@@ -1,5 +1,6 @@
 #include "mainwidget.h"
 
+
 MainWidget::MainWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -104,8 +105,10 @@ MainWidget::MainWidget(QWidget *parent)
     connect(gs, &GetSerial::receivedHBPdata, &nibp, &NIBPWidget::setHighPa);
     connect(gs, &GetSerial::receivedIBPdata, &nibp, &NIBPWidget::setAverage);
 
-    connect(gs, &GetSerial::receivedSPO2Wdata, &spo2, &SPO2Widget::setDataNum);
-    connect(gs, &GetSerial::receivedBPMdata, &spo2, &SPO2Widget::setBPMNum);
+    //connect(gs, &GetSerial::receivedSPO2Wdata, &spo2, &SPO2Widget::setDataNum);
+    //connect(gs, &GetSerial::receivedBPMdata, &spo2, &SPO2Widget::setBPMNum);
+    connect(com, &QWidgetEcgCom::sendbpm, &spo2, &SPO2Widget::setBPMNum);
+    connect(com, &QWidgetEcgCom::sendbpm, &spo2, &SPO2Widget::setDataNum);
 
     connect(gs, &GetSerial::receivedT1data, &temp, &TEMPWidget::setT1Data);
     connect(gs, &GetSerial::receivedT2data, &temp, &TEMPWidget::setT2Data);
